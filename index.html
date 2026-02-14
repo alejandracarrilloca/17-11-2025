@@ -80,6 +80,11 @@
       position: relative;
     }
 
+    /* 👇 SOLO para la carta (dos imágenes) */
+    .modal-content.large {
+      max-width: 900px;
+    }
+
     .modal img {
       max-width: 100%;
       border-radius: 10px;
@@ -87,14 +92,14 @@
 
     .image-row {
       display: flex;
-      gap: 15px;
+      gap: 20px;
       justify-content: center;
       flex-wrap: wrap;
       margin-top: 15px;
     }
 
     .image-row img {
-      width: 45%;
+      width: 48%;
     }
 
     .close {
@@ -163,9 +168,12 @@
       const modal = document.getElementById("imageModal");
       const content = document.getElementById("dynamicContent");
 
+      content.classList.remove("large");
       content.innerHTML = `<span class="close" onclick="closeImage()">×</span>`;
 
       if (src2) {
+        content.classList.add("large"); // 👈 SOLO cuando hay dos imágenes
+
         const row = document.createElement("div");
         row.className = "image-row";
 
