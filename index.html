@@ -147,7 +147,7 @@
 
     <!-- CARTA CON DOS IMAGENES -->
     <img class="item carta" src="carta.png"
-         onclick="openImage('carta1.png','carta2.png')" />
+         onclick="openImage('C1.png','C2.png')" />
 
     <img class="item cerillos" src="ferrari.jpeg" onclick="openImage('2.png')" />
     <img class="item cine" src="cine.png" onclick="openImage('pelis.png')" />
@@ -171,7 +171,7 @@
       content.innerHTML = `<span class="close" onclick="closeImage()">×</span>`;
 
       if (src2) {
-        content.classList.add("large"); // 👈 SOLO cuando hay dos imágenes
+        content.classList.add("large"); 
 
         const row = document.createElement("div");
         row.className = "image-row";
